@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代际生活观察 | 3D视角下的青春 vs 慢时光</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        
+        /* 保持圆润风格 */
+        .super-rounded { border-radius: 2.5rem; }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        
+        /* 隐藏滚动条但保持滚动功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 导航栏 -->
+    <nav class="bg-gray-900 text-white py-5 px-8 rounded-b-3xl mx-4 mt-2 mb-8 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-400 rounded-lg flex items-center justify-center">
+                    <span class="text-gray-900 font-bold text-xl">L</span>
+                </div>
+                <span class="text-xl font-bold tracking-wide">LifeStyle 对照组</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm text-gray-300">
+                <span class="text-emerald-400 cursor-pointer">生活反差</span>
+                <span class="hover:text-emerald-400 transition cursor-pointer">饮食习惯</span>
+                <span class="hover:text-emerald-400 transition cursor-pointer">作息规律</span>
+            </div>
+            <button class="bg-emerald-500 hover:bg-emerald-600 text-gray-900 font-bold px-6 py-2 rounded-full text-sm transition">
+                观看纪录片
+            </button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 pb-20">
+        
+        <!-- 1. 头部 Hero 区域：点明主题 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+            
+            <!-- 左侧：文案介绍 -->
+            <div class="bg-emerald-400 super-rounded p-10 flex flex-col justify-center relative overflow-hidden shadow-lg min-h-[380px]">
+                <span class="bg-white/20 backdrop-blur-md text-gray-900 text-xs font-bold px-3 py-1 rounded-full w-fit mb-6 border border-white/30">
+                    社会学观察
+                </span>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    当年轻人的 <br>
+                    <span class="text-white">“裸眼3D”人生</span><br>
+                    遇上老一辈的慢生活
+                </h1>
+                <p class="text-gray-800 font-medium mb-8 max-w-md opacity-90">
+                    我们用极具视觉冲击力的裸眼3D手法记录年轻人的快节奏日常，并将其与四位老人朴实、宁静的生活并置。
+                    <br><br>
+                    <strong>不仅是拍摄手法的不同，更是两种生活流速的对话。</strong>
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-gray-900 text-white px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition shadow-lg">
+                        开始对比
+                    </button>
+                </div>
+                
+                <!-- 装饰元素 -->
+                <div class="absolute -right-5 bottom-10 w-32 h-32 border-8 border-white/20 rounded-full"></div>
+            </div>
+
+            <!-- 右侧：对比主图 -->
+            <div class="relative h-[380px] lg:h-auto group overflow-hidden super-rounded">
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Generational Lifestyle Contrast" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <p class="text-emerald-400 font-bold mb-1">Vol.01</p>
+                    <h3 class="text-2xl font-bold">同一片天空，不同的时区</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 标题区 -->
+        <div class="mb-8 pl-2 border-l-4 border-emerald-400">
+            <h2 class="text-3xl font-bold text-gray-900">生活实录 <span class="text-gray-400 font-normal text-xl ml-2">Video Gallery</span></h2>
+        </div>
+
+        <!-- 2. 核心视频网格布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+
+            <!-- 🔴 视频 1: 年轻人的生活 (3D裸眼拍摄) -->
+            <!-- 占据左侧，强调视觉冲击力 -->
+            <div class="lg:col-span-7 bg-white p-5 rounded-[2.5rem] shadow-sm card-hover border border-gray-100 flex flex-col">
+                <!-- 视频容器 -->
+                <div class="relative w-full aspect-video bg-gray-900 rounded-[2rem] overflow-hidden mb-4 shadow-inner group">
+                    <!-- 你的视频文件: 3D裸眼.mp4 -->
+                    <video class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" controls 
+                           poster="https://placehold.co/800x450/222/FFF?text=VIDEO+1:+Young+Life+(3D+Effect)">
+                        <!-- 请修改下方的 src 路径 -->
+                        <source src="C:\Users\A\Desktop\video\sucai\3D裸眼.mp4" type="video/mp4">
+                        您的浏览器不支持视频标签。
+                    </video>
+                    
+                    <!-- 标签 -->
+                    <div class="absolute top-4 left-4 bg-emerald-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        ⚡ 年轻世代 Young Gen
+                    </div>
+                    <div class="absolute top-4 right-4 bg-black/50 backdrop-blur text-white text-[10px] px-2 py-1 rounded border border-white/20">
+                        拍摄手法：裸眼3D
+                    </div>
+                </div>
+                
+                <!-- 描述 -->
+                <div class="px-2 pb-2 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">立体而奔忙的青春</h3>
+                            <span class="text-3xl">🏄‍♂️</span>
+                        </div>
+                        <p class="text-gray-500 leading-relaxed">
+                            视频采用<strong>裸眼3D手法</strong>拍摄，生动还原了年轻人丰富、立体甚至有些眩晕的生活节奏。科技感与快节奏的剪辑，正是他们当下的心理写照。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟠 视频 2: 65岁婆婆 -->
+            <!-- 占据右侧，形成第一组对比 -->
+            <div class="lg:col-span-5 bg-orange-50 p-5 rounded-[2.5rem] shadow-sm card-hover border border-orange-100 flex flex-col">
+                <div class="relative w-full aspect-square md:aspect-video lg:aspect-square bg-gray-200 rounded-[2rem] overflow-hidden mb-4 shadow-inner">
+                    <!-- 你的视频文件: 65岁婆婆.mp4 -->
+                    <video class="w-full h-full object-cover" controls 
+                           poster="https://placehold.co/600x600/FAD/333?text=VIDEO+2:+65yo+Grandma">
+                        <source src="C:\Users\A\Desktop\video\sucai\65岁婆婆.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute top-4 left-4 bg-orange-400 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        🍂 65岁 Age
+                    </div>
+                </div>
+                <div class="px-2">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">65岁婆婆的烟火气</h3>
+                    <p class="text-sm text-gray-600">从菜场到厨房，她的生活是平面的、踏实的，充满了具体的细节。</p>
+                </div>
+            </div>
+
+            <!-- 🟡 视频 3: 70+的奶奶 -->
+            <div class="lg:col-span-6 bg-white p-6 rounded-[2rem] flex flex-col sm:flex-row gap-5 items-center card-hover border border-gray-100 shadow-sm">
+                <div class="w-full sm:w-1/2 h-40 rounded-2xl overflow-hidden bg-gray-100 relative">
+                    <!-- 你的视频文件: 70+的奶奶.mp4 -->
+                    <video class="w-full h-full object-cover" controls 
+                           poster="https://placehold.co/400x300/EEE/555?text=VIDEO+3:+70%2B+Grandma">
+                        <source src="C:\Users\A\Desktop\video\sucai\70+的奶奶.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute bottom-2 left-2 bg-gray-900/70 text-white text-[10px] px-2 py-0.5 rounded">70+</div>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                    <h3 class="text-lg font-bold mb-2">70+ 奶奶的闲适</h3>
+                    <p class="text-sm text-gray-500 mb-4">不再追赶时间，而是享受时间。每一个动作都比年轻人慢半拍。</p>
+                    <span class="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">#独处时光</span>
+                </div>
+            </div>
+
+            <!-- 🔵 视频 4: 80岁的爷爷 -->
+            <div class="lg:col-span-6 bg-gray-900 text-white p-6 rounded-[2rem] flex flex-col sm:flex-row gap-5 items-center card-hover shadow-lg">
+                <div class="w-full sm:w-1/2 h-40 rounded-2xl overflow-hidden bg-gray-800 relative border border-gray-700">
+                     <!-- 你的视频文件: 80岁的爷爷.mp4 -->
+                     <video class="w-full h-full object-cover" controls 
+                            poster="https://placehold.co/400x300/333/FFF?text=VIDEO+4:+80yo+Grandpa">
+                        <source src="C:\Users\A\Desktop\video\sucai\80岁的爷爷.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute bottom-2 left-2 bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded">80岁</div>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                    <h3 class="text-lg font-bold mb-2">80岁爷爷的坚守</h3>
+                    <p class="text-sm text-gray-400 mb-4">甚至更加缓慢，仿佛静止的画面。与年轻人的3D动态形成最极致的反差。</p>
+                    <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">#岁月沉淀</span>
+                </div>
+            </div>
+
+            <!-- 🟣 视频 5: 一群老人 (底部总结) -->
+            <div class="lg:col-span-12 bg-rose-400 p-8 md:p-10 rounded-[2.5rem] mt-4 text-white relative overflow-hidden shadow-xl">
+                <!-- 背景装饰 -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <div class="lg:w-1/3 z-10">
+                        <span class="inline-block bg-white text-rose-500 font-bold px-3 py-1 rounded-full text-xs mb-4 shadow-sm">群体生活 Contrast</span>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4">当老人们聚在一起</h3>
+                        <p class="text-rose-100 leading-relaxed mb-6">
+                            年轻人的聚会可能是在KTV、是在网络游戏里，是喧闹且电子化的。而老人们聚在一起，是晒太阳、是闲聊、是没有任何技术辅助的纯粹陪伴。
+                        </p>
+                        <div class="flex items-center gap-2 text-sm font-medium">
+                            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                            正在播放生活实录
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-2/3 w-full z-10">
+                        <div class="w-full aspect-[21/9] bg-black/20 rounded-[2rem] overflow-hidden backdrop-blur-sm shadow-2xl border border-white/10">
+                            <!-- 你的视频文件: 一群老人.mp4 -->
+                            <video class="w-full h-full object-cover" controls 
+                                   poster="https://placehold.co/800x340/D45D5D/FFF?text=VIDEO+5:+Group+of+Elders+(Community+Life)">
+                                <source src="C:\Users\A\Desktop\video\sucai\80岁的爷爷.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="bg-white mt-10 py-12 border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-900 font-bold text-lg mb-2">GenLife Project</p>
+            <p class="text-gray-400 text-sm">关注不同世代的生活方式，记录时间的痕迹。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
